@@ -1,0 +1,10 @@
+{
+  "name": "いまここ精度",
+  "short_name": "GPS精度",
+  "description": "走行中の現在地とGPS推定精度を5秒ごとに表示します。",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f1e8",
+  "theme_color": "#f4f1e8",
+  "lang": "ja"
+}

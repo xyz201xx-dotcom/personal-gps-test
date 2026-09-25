@@ -1,0 +1,128 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", sans-serif;
+  color: #182019;
+  background: #f4f1e8;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100dvh;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.9), transparent 48%),
+    #f4f1e8;
+}
+
+button { font: inherit; }
+
+.app {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: max(24px, env(safe-area-inset-top)) 24px max(18px, env(safe-area-inset-bottom));
+}
+
+.reading {
+  width: min(900px, 100%);
+  margin: auto;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 28px;
+  color: #5f6a60;
+  font-size: clamp(0.78rem, 2vw, 0.95rem);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.welcome h1,
+.place {
+  margin: 0;
+  text-wrap: balance;
+  font-size: clamp(2.35rem, 9vw, 6.5rem);
+  font-weight: 750;
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.welcome p {
+  margin: 30px 0 22px;
+  color: #5f6a60;
+  font-size: 1rem;
+}
+
+button {
+  min-height: 56px;
+  padding: 0 26px;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  background: #1f6b43;
+  font-weight: 750;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(31, 107, 67, 0.22);
+}
+
+button:active { transform: translateY(1px); }
+
+.accuracy {
+  margin: clamp(28px, 6vh, 52px) 0 0;
+  color: #445047;
+  font-size: clamp(1.2rem, 3.8vw, 2rem);
+  line-height: 1.25;
+}
+
+.accuracy strong {
+  display: block;
+  margin-top: 8px;
+  color: #1f6b43;
+  font-size: clamp(2.8rem, 10vw, 7rem);
+  letter-spacing: -0.06em;
+}
+
+.coordinates {
+  min-height: 1.4em;
+  margin: 24px 0 0;
+  color: #7b827c;
+  font: 0.8rem ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: 0.02em;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 28px;
+  color: #687169;
+  font-size: 0.78rem;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #a1a9a2;
+}
+
+.pulse.active {
+  background: #2a9b61;
+  box-shadow: 0 0 0 0 rgba(42, 155, 97, 0.45);
+  animation: ping 2s infinite;
+}
+
+.error { color: #a1392f; }
+
+@keyframes ping {
+  70% { box-shadow: 0 0 0 8px rgba(42, 155, 97, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(42, 155, 97, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse.active { animation: none; }
+}
