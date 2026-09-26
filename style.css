@@ -93,6 +93,12 @@ button:active { transform: translateY(1px); }
   letter-spacing: 0.02em;
 }
 
+.data-usage {
+  margin: 10px 0 0;
+  color: #7b827c;
+  font-size: 0.72rem;
+}
+
 footer {
   display: flex;
   align-items: center;
